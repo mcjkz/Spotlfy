@@ -9,7 +9,6 @@ import Loading from "@/app/components/Loading";
 
 const socket = io("http://localhost:4000");
 
-
 export default function UserPage() {
   const { id } = useParams();
   const { userData } = useAuth();
