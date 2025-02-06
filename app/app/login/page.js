@@ -14,6 +14,7 @@ import "./Login.css";
 import { useAuth } from "../contexts/AuthContext";
 import Loading from "../components/Loading";
 
+
 export default function Login() {
   const router = useRouter();
   const [email, setEmail] = useState("");
