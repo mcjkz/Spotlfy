@@ -11,6 +11,7 @@ export default function HomePage() {
   const searchParams = useSearchParams();
   const queryParam = searchParams.get("query");
 
+  
   return (
     <Suspense fallback={<Loading />}>
       {queryParam ? <SpotifyList /> : <PopularData />}
