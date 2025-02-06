@@ -1,0 +1,126 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.588);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: #121212;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    h2{
+      margin-bottom: 10px;
+    }
+    .tekst{
+      background: #1F1F1F;
+      border: 0;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      border: 1.5px solid #1F1F1F;
+      width:100%;
+      box-sizing: border-box;
+    }
+    .tekst:hover{
+      border: 1.5px solid white;
+    }
+    .tekst:focus{
+      outline: 1px solid white;
+      border: 1.5px solid white;
+    }
+    .p-delete{
+      color: #ED2C3F;
+      svg{
+        width:18px;
+        height: 18px;
+        margin-right: 4px;
+        transform: translateY(3px)
+      }
+    }
+    .p-ok{
+      margin-bottom: 10px;
+    }
+    .modal-buttons{
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      button{
+        border-radius: 500px;
+        border: 0;
+        padding: 10px 16px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.05s ease-in-out;
+      }
+      button:hover{
+        transform: scale(1.05);
+      }
+      .usun{
+        background-color: #ED2C3F;
+      }
+      .usun:hover{
+        background-color: #E91429;
+      }
+      .zapisz{
+        background-color: #1ED760;
+      }
+      .zapisz:hover{
+        background-color: #3BE477;
+      }
+      
+    }
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    color: white;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .playlist-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 200px;
+    margin-bottom: 20px;
+    user-select: none;
+  }
+  
+  .playlist-list li {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    input{
+        margin-right: 10px;
+        
+    }
+  }
+  hr{
+    color: #dddddd26;
+    margin: 0 15px;
+  }
+  
+  .playlist-list li:hover {
+    background: #1F1F1F;
+  }
+  
+  

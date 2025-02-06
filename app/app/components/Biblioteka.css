@@ -1,0 +1,108 @@
+.left-section-scroll{
+    height: 100%;
+    box-sizing: border-box;
+    .biblioteka-container{
+        display: flex;
+        padding: 17px 20px 20px 20px;
+        
+        color: #B3B3B3;
+        align-items: center;
+        justify-content:space-between;
+        .biblioteka-button{
+            display: flex;
+            padding: 4px 8px;
+            border: 0;
+            background-color: rgba(0, 0, 0, 0);
+            color: #B3B3B3;
+            transition: color 0.3s ease-out;
+            cursor: pointer;
+            .biblioteka-icon{
+                display: flex;
+                align-self: center;
+                margin-right: 12px;
+            }
+            h2{
+                font-size: 15px;
+            }
+        }
+        .biblioteka-button:hover{
+            color: white;
+        }
+        .biblioteka-dodaj{
+            display: flex;
+            border:0;
+            padding: 8px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0);
+            cursor: pointer;
+            color: #B3B3B3;
+            transition: color 0.3s ease-out;
+        }
+        .biblioteka-dodaj:hover{
+            background-color: #1E1E1E;
+            color: white;
+        }
+    }
+
+    .playlista{
+        height: calc(100% - 80px);
+        box-sizing: border-box;
+        overflow-y: auto;
+        padding-left: 10px;
+        .playlista-brak{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background-color: #1F1F1F;
+            padding: 18px 20px;
+            border-radius: 8px;
+            p:nth-child(1){
+                font-weight: bold;
+                font-size: 15px;
+            }
+            p:nth-child(2){
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
+            button{
+                width:fit-content;
+                background-color: white;
+                border-radius: 500px;
+                font-size: 14px;
+                font-weight: bold;
+                padding: 6px 16px;
+                border: 0;
+                cursor: pointer;
+                transition: transform 0.05s ease;
+            }
+            button:hover{
+            transform: scale(1.05);
+            }
+        }
+        .playlists-container{
+            margin-bottom: 10px;
+            margin-right: 10px;
+            .playlist-card{
+                display: flex;
+                padding: 8px;
+                font-size: 15px;
+                border-radius: 5px;
+                gap: 10px;
+                .playlist-image{
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 5px;
+                }
+                .playlist-name-container{
+                    p:nth-child(2){
+                        color: #B2B2B2;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .playlist-card:hover{
+                background-color: #1F1F1F;
+            }
+        }
+    }
+}

@@ -1,0 +1,203 @@
+.login-body{
+    background-color: #121212;
+}
+.login-background {
+    background: linear-gradient(#2A2A2A,black);
+    background-attachment: fixed;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.okno-logowania{
+    width:734px;
+    background-color: #121212;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    .pole-logowania{
+        margin: auto;
+        width: 324px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .header{
+            margin-top: 25px;
+            font-size: 16px;
+            letter-spacing: -1px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 30px;
+            text-wrap: nowrap;
+        }
+        .walidacja{
+            display: flex;
+            width: 500px;
+            box-sizing: border-box;
+            background-color: #E91429;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            svg{
+                flex-shrink: 0;
+                margin-right: 20px;
+                width:22px;
+                height:22px;
+            }
+            
+        }
+        .stopka{
+            margin-bottom: 50px;
+            font-size: 15px;
+            text-wrap: nowrap;
+            letter-spacing: -0.2px;
+            p{
+                color:#B3B3B3;
+                a{
+                    color: white;
+                }
+            } 
+        }
+        form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                label{
+                    width: 100%;
+                    align-self: flex-start;
+                    font-weight: bold;
+                    font-size: 13px;
+                }
+                .password{
+                    margin-top: 15px;
+                }
+                input{
+                    width: 324px;
+                    box-sizing: border-box;
+                    background-color: rgba(0, 0, 0, 0);
+                    color: white;
+                    border-radius: 3px;
+                    padding: 11px;
+                    border: 1.5px solid #B3B3B3;
+                    margin-top: 7px;
+                    font-size: 14px;
+                }
+                input.error{
+                    border: 1.5px solid #ED2C3F;
+                }
+                input.error:hover{
+                    border: 1.5px solid #ED2C3F;
+                }
+                input.error:focus{
+                    border: 1.5px solid #ED2C3F;
+                    outline: 1px solid #ED2C3F;
+                }
+                input:hover{
+                    border: 1.5px solid white;
+                }
+                input:focus{
+                    outline: 1px solid white;
+                    border: 1.5px solid white;
+                }
+                .input-container{
+                    display: flex;
+                    flex-direction: row;
+                    position: relative;
+                    align-items: center;
+                    input{
+                        width: 324px;
+                        padding-right: 45px;
+                    }
+                    .widocznosc-hasla{
+                        position: absolute;
+                        bottom: 10px;
+                        right: 10px;
+                        border:0;
+                        padding: 0;
+                        color: #B3B3B3;
+                        background-color: rgba(0, 0, 0, 0);
+                        display: flex;
+                        align-self: center;
+                        cursor: pointer;
+                    }
+                    .widocznosc-hasla:hover{
+                        transform: scale(1.04);
+                        color: white;
+                    }
+                    .widocznosc-hasla:active{
+                        transform: scale(1);
+                        color: #838383;
+                    }
+                }
+            }
+            .dalej{
+                width: 100%;
+                background-color: #1ED760;
+                border: 0;
+                font-weight: bold;
+                border-radius: 50px;
+                padding: 12px;
+                font-size: 15px;
+                margin-top: 20px;
+                margin-bottom: 60px;
+                cursor: pointer;
+            }
+            .dalej:disabled {
+                color: black;
+                cursor: not-allowed;
+                opacity: 0.3;
+            }
+            .dalej:not(.apply):hover {
+                background-color: #3BE477;
+            }
+            .dalej:not(.apply):active{
+                background-color: #1ABC54;
+            }
+        }
+        hr{
+            margin: 40px 0;
+            color: #292929;
+            width: 500px;
+        }
+        .google{
+            display: flex;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            font-size: 15px;
+            border-radius: 50px;
+            padding: 12px;
+            font-weight: bold;
+            border: 1px solid #818181;
+            cursor: pointer;
+            align-items: center;
+            .logo{
+                margin-left: 15px;
+                margin-right: 45px;
+                display: flex;
+                align-items: center; 
+            }
+            p{
+                display: flex;
+                align-self: center;
+            }
+        }
+        .google:hover{
+            border: 1px solid white;
+        }
+        .google:active{
+            border: 1px solid #5C5C5C;
+            color: #B8B8B8;
+        }
+    }
+}

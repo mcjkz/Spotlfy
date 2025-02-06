@@ -1,0 +1,49 @@
+.konto-container{
+    background: linear-gradient(to bottom, #1a2f01 0%, #1a2f01 9%, #111111 40%, #111111 100%);
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding: 12px 20px;
+    height: 100%;
+    .konto-nav{
+        display: flex;
+        .konto-detail{
+            flex-grow: 1;
+            h1{
+                font-size: 68px;
+                letter-spacing: -3px;
+            }
+        }
+        .przycisk-follow{
+            display: flex;
+            align-items: center;
+            button{
+                border-radius: 500px;
+                font-size: 15px;
+                font-weight: bold;
+                padding: 6px 10px;
+                border: 0;
+                cursor: pointer;
+                transition: transform 0.05s ease;
+            }
+            .unfollow-button{
+                border: 0;
+                background-color: #00000000;
+                color: #B3B3B3;
+                border: 2px solid #B3B3B3;
+                box-sizing: border-box;
+            }
+            .unfollow-button:hover{
+                transform: scale(1.05);
+                color: white;
+                border: 2px solid white;
+            }
+            .follow-button{
+                background-color: white;
+                border: 2px solid white;
+            }
+            .follow-button:hover{
+                transform: scale(1.05);
+            }
+        }
+    }
+}

@@ -1,0 +1,319 @@
+.scrolling-text-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .scrolling-text-container span {
+    display: inline-block;
+    animation: scroll 35s linear infinite;
+    animation-delay: 1.5s;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(calc(-1 * var(--scroll-distance)));
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  
+  
+
+.stopka{
+    padding: 8px 10px;
+    font-size: 14px;
+    .info{
+        background: linear-gradient(to right, #AF2896, #519AF4);
+        padding: 10px 20px;
+        display: flex;
+        cursor: pointer;
+        .description{
+            flex-grow: 1;
+            p:first-child{
+                font-weight: bold;
+            }
+        }
+        .register{
+            background-color: white;
+            border-radius: 500px;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 12px 28px 12px 28px;
+            border: 0;
+            cursor: pointer;
+            transition: transform 0.05s ease;
+          }
+          .register:hover{
+            transform: scale(1.05);
+          }
+    }
+    .komunikat-utwor{
+        padding: 10px 10px;
+        background-color: white;
+        color: black;
+        border-radius: 7px;
+        margin-bottom: 8px;
+    }
+    .odtwarzacz{
+        padding: 5px 12px 10px 7px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        .track-container{
+            display: flex;
+            align-items: center;
+            .okładka{
+                display: flex;
+                img{
+                    height: 56px;
+                    width:56px;
+                    border-radius: 4px;
+                }
+            }
+            .track-name{
+                padding: 0 14px;
+                p:nth-child(1){
+                    font-size: 14.5px;
+                    margin-bottom: -2px;
+                }
+                p:nth-child(2){
+                    color: #B3B3B3;
+                    font-size: 11px;
+                    max-width: 250px;
+                } 
+            }
+            .dodaj-ulub{
+                display: flex;
+                padding: 0;
+                border: 0;
+                color: #B3B3B3;
+                background-color: rgba(0, 0, 0, 0);
+                transition: transform 0.1s ease-out;
+                cursor: pointer;
+            }
+            .dodaj-ulub.klik{
+                color: #1ED760;
+            }
+            .dodaj-ulub.klik:hover{
+                transform: scale(1.04);
+                color: #1ED760;
+            }
+            .dodaj-ulub:hover{
+                transform: scale(1.04);
+                color: white;
+            }
+        }
+        .odtwarzacz-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            height: 57px;
+            .przyciski-container{
+                display: flex;
+                gap: 10px;
+                .zmiana{
+                    background-color: rgba(0, 0, 0, 0);
+                    color: #B3B3B3;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 32px;
+                    height: 32px;
+                    border: 0;
+                    cursor: pointer;
+                    transition: transform 0.1s ease-out;
+                    svg{
+                        display: flex;
+                        align-self: center;
+                        justify-content: center;
+                        margin-right: 2px;
+                        margin-bottom: 2px;
+                    }                
+                }
+                .zmiana:hover{
+                    transform: scale(1.05);
+                    color: white;
+                }
+                .zmiana:disabled{
+                    color: #363636;
+                    pointer-events: none;
+                    cursor: unset;
+                }
+                button:nth-child(2){
+                    width: fit-content;
+                    border: 0;
+                    border-radius: 50%;
+                    width: 32px;
+                    height: 32px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: transform 0.1s ease-out;
+                }
+                button:nth-child(2):disabled{
+                    cursor: unset;
+                    color: black;
+                    pointer-events: none;
+                }
+                button:nth-child(2):hover{
+                    transform: scale(1.05);
+                }
+                .pause svg{
+                    margin-left: 2px;
+                    height: 16px;
+                }
+                .play svg{
+                    height: 18px;
+                    margin-left: 0.5px;
+                    margin-bottom: 0.5px;
+                }
+            }
+            .progress-container {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 500px;
+                user-select: none;
+                span{
+                    color: #B3B3B3;
+                    font-size: 12px;
+                    width: 26px;
+                }
+                .progress-wrapper {
+                    position: relative;
+                    width: 100%;
+                    height: 5px;
+                    background-color: #4D4D4D;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    
+                }
+                
+                .progress-fill {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    height: 5px;
+                    width: 0%;
+                    border-radius: 3px;
+                    background-color: white;
+                    transform: translateY(-50%);
+                }
+                
+                .progress-thumb {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(-10%, -50%);
+                    width: 14px;
+                    height: 14px;
+                    background: white;
+                    border-radius: 50%;
+                    pointer-events: none; 
+                    opacity: 0;
+                }
+                
+                .progress-wrapper input[type="range"] {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+    
+                .progress-wrapper:hover .progress-fill {
+                    background-color: #1DB954;
+                }
+                
+                .progress-wrapper:hover .progress-thumb {
+                    opacity: 1;
+                    background: #fff;
+                }
+                .progress-wrapper input[type="range"]:disabled {
+                    cursor: default;
+                }
+            } 
+            
+        }
+        .volume-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 150px;
+            user-select: none;
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                border: 0;
+                background-color: rgba(0, 0, 0, 0);
+                color: #B3B3B3;
+                transition: transform color 0.5s ease-out;
+                cursor: pointer;
+            }
+            button:hover{
+                color: white;
+            }
+            .volume-wrapper {
+                position: relative;
+                width: 100%;
+                height: 5px;
+                background-color: #4D4D4D;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+            
+            .volume-fill {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                height: 5px;
+                width: 0%;
+                border-radius: 3px;
+                background-color: white;
+                transform: translateY(-50%);
+            }
+            
+            .volume-thumb {
+                position: absolute;
+                top: 50%;
+                transform: translate(-10%, -50%);
+                width: 14px;
+                height: 14px;
+                background: white;
+                border-radius: 50%;
+                pointer-events: none;
+                opacity: 0;
+            }
+            
+            .volume-wrapper input[type="range"] {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                cursor: pointer;
+            }
+            
+            .volume-wrapper:hover .volume-fill {
+                background-color: #1DB954;
+            }
+            
+            .volume-wrapper:hover .volume-thumb {
+                opacity: 1;
+            }
+        }   
+    }
+}

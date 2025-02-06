@@ -1,0 +1,14 @@
+[
+  {
+    "followerId": "32dcd106-c5fa-424c-b327-b3b59062f9d3",
+    "followedId": "baebca33-6168-4099-ac9c-5585e5a33677"
+  },
+  {
+    "followerId": "e38cd779-4ecf-47f5-8d6d-89aa2439bebf",
+    "followedId": "baebca33-6168-4099-ac9c-5585e5a33677"
+  },
+  {
+    "followerId": "baebca33-6168-4099-ac9c-5585e5a33677",
+    "followedId": "e38cd779-4ecf-47f5-8d6d-89aa2439bebf"
+  }
+]

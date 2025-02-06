@@ -1,0 +1,160 @@
+.list-section{
+    overflow-y: auto;
+    padding: 12px 20px;
+    height: 100%;
+    h2{
+        margin-bottom: 10px;
+        font-size: 20x;
+    }
+    .track-container{
+        display: flex;
+        gap: 15px;
+        margin-bottom: 30px;
+        .best-result-nav{
+            display: flex;
+            flex-direction: column;
+            min-width: 450px;
+            .best-result{
+                padding: 20px;
+                user-select: none;
+                border-radius: 10px;
+                display: flex;
+                position: relative;
+                align-items: center;
+                box-sizing: border-box;
+                flex-grow: 1;
+                background-color: #181818;
+                cursor: pointer;
+                img{
+                    width:120px;
+                    border-radius: 8px;
+                }
+                div{
+                    p:first-child{
+                        font-size: 28px;
+                        font-weight: bold;
+                        color:white;
+                    }
+                    p:nth-child(2){
+                        color: #B3B3B3;
+                        font-size: 14px;
+                    }
+                }
+                .play-icon{
+                    pointer-events: none;
+                    position: absolute;
+                    right: 15px;
+                    bottom: 15px;
+                    background-color: #1ED760;
+                    box-sizing: border-box;
+                    padding: 5px;
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 0;
+                    color: black;
+                    opacity: 0;
+                    transition: opacity 0.2s ease, transform 0.2s ease;
+                    svg{
+                        margin-left: 2px;
+                        width: 22px;
+                        height: 20px;
+                    }
+                }
+            }
+            .best-result:hover{
+                background-color: #2A2A2A;
+            }
+            .best-result:hover .play-icon {
+                opacity: 1;
+                transform: translateY(-20%);
+              }
+        }
+        .track-list-nav{
+            flex-grow: 1;
+            .track-list{
+                padding: 0;
+                user-select: none;
+                li{
+                    display: flex;
+                    list-style-type: none;
+                    padding: 10px 10px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    p:nth-child(1){
+                        font-size: 14.5px;
+                        margin-bottom: -1px;
+                    }
+                    p:nth-child(2){
+                        font-size: 13.5px;
+                        color: #B3B3B3;
+                    }
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 8px;
+                        border-radius: 4px;
+                    }
+                }
+                li:hover{
+                    background-color: #2A2A2A;
+                }
+            }
+        }
+    }
+    .users-list{
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            margin-bottom: 40px;
+            user-select: none;
+            .card{
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                width: 162px;
+                box-sizing: border-box;
+                border: 0;
+                color: white;
+                background-color: rgba(0, 0, 0, 0);
+                border-radius: 10px;
+                padding: 12px 10px 12px 10px;
+                cursor: pointer;
+                .user-avatar{
+                    background-color: #1ED760;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 140px;
+                    width: 140px;
+                    margin-bottom: 8px;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 70px;
+                    align-self: center;
+                }
+                p{
+                    align-self: flex-start;
+                    font-size: 15px;
+                }
+                .description{
+                    margin-top: 3px;
+                    font-size: 13.5px;
+                    color: #B3B3B3;
+                }
+            }
+            .card:hover{
+                background-color: #1F1F1F
+            }
+        }
+    }
+}
+
+
+
+
+

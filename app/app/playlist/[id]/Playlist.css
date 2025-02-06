@@ -1,0 +1,204 @@
+.playlist-detail{
+    background: linear-gradient(to bottom, #222222 0%, #222222 5%, #111111 30%, #111111 100%);
+    background-attachment: local, scroll;
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding: 12px 20px;
+    height: 100%;
+    .album-detail{
+        margin-top: 15px;
+        display: flex;
+        gap: 20px;
+        .album-name{
+            flex-grow: 1;
+            p:first-child{
+                font-size: 14px;
+                margin-bottom: -5px;
+            }
+            h2{
+                font-size: 68px;
+                letter-spacing: -3px;
+            } 
+        }
+        .album-buttons{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            button{
+                border-radius: 500px;
+                border:0;
+                padding: 6px 10px;
+                transition: transform 0.05s ease-in-out;
+                cursor: pointer;
+            }
+            button:hover{
+                transform: scale(1.05);
+            }
+            .udostepnij, .edytuj{
+                border: 1px solid #B3B3B3;
+                background-color: rgba(0, 0, 0, 0);
+                color: #B3B3B3;
+            }
+            .udostepnij:hover,.edytuj:hover{
+                color: white;
+                border: 1px solid white;
+            }
+            .usun{
+                border: 1px solid #ED2C3F;
+                background-color: rgba(0, 0, 0, 0);
+                color: #ED2C3F;
+            }
+            .usun:hover{
+                border: 1px solid #E91429;
+                color: #E91429;
+            }
+        }
+    }
+    .track-nav{
+        display: flex;
+        padding: 10px 0;
+        gap: 15px;
+        align-items: center;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #B3B3B3;
+        text-wrap: nowrap;
+        .track-info{
+            display: grid;
+            flex-grow: 1;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            margin-left: 64px;
+            font-size: 14px;
+            letter-spacing: -0.2px;
+            
+            p:first-child{
+                width: 300px;
+            }
+        }
+        .track-year{
+            margin-right: 60px;
+            p{
+                text-align: end;
+                
+                width: 40px;
+            }
+        }
+        .numer{
+            width: 20px;
+            text-align: end;
+            margin: 0 0px 0 20px;
+            color: #B3B3B3;
+        }
+    }
+    hr{
+        color: #b3b3b332;
+        margin-bottom: 10px;
+    }
+    .track-item{
+        display: flex;
+        padding: 10px 0;
+        gap: 15px;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+        user-select: none;
+        .track-info{
+            display: grid;
+            flex-grow: 1;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            color: #B3B3B3;
+            font-size: 14px;
+            letter-spacing: -0.2px;
+            
+            p:first-child{
+                width: 300px;
+                font-size: 16px;
+                color: white;
+            }
+        }
+        .track-year{
+            
+            color: #B3B3B3;
+            p{
+                text-align: start;
+                width: 40px;
+                font-size: 14px;
+                letter-spacing: 0.1px;
+            }
+        }
+        .numer{
+            width: 20px;
+            flex-shrink: 0;
+            padding: 0 15px 0 10px;
+            .track-number{
+                text-align: end;
+                margin: 0 10px 0 20px;
+                color: #B3B3B3;
+            }
+            .track-play{
+                text-align: end;
+                margin: 0 14px 0 16px;
+            }
+        }
+        .track-usun{
+            margin-right: 20px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            .remove-track-button:hover{
+                color:#ED2C3F;
+                transform: scale(1.05);
+            }
+        }
+        
+    }
+    .track-item .remove-track-button {
+        display: none;
+    }
+    .track-item:hover .remove-track-button {
+        display: block;
+        border: 0;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        color: #B3B3B3;
+        cursor: pointer;
+        margin:0;
+        padding: 0;
+        display: flex;
+        transition: transform 0.05s ease;
+        svg{
+            width: 25px;
+            height: 20px;
+        }
+      }
+    .track-item:hover{
+        background-color: #1F1F1F;
+    }
+    
+    .track-item .numer .track-play {
+        display: none;
+        color: white;
+    }
+    .track-item:hover .numer .track-number {
+        display: none;
+        
+    }
+    .track-item:hover .numer .track-play {
+    display: inline;
+    
+    }
+}
+
+.album-image{
+    height: 150px;
+    border-radius: 10px;
+}
+
+.track-image{
+    height: 50px;
+    border-radius: 4px;
+}
+
+  

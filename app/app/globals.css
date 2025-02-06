@@ -1,0 +1,162 @@
+*{
+  margin: 0;
+  font-family: 'Poppins';
+}
+
+.ladowanie{
+  background: #121212;
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  color: white;
+  background: black;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+header{
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: black;
+  padding: 10px 25px 10px 20px;
+  justify-content: space-between;
+  z-index: 1;
+  .icon-spotify{
+    width: 32px;
+    align-self: center;
+    margin-right: 20px;
+  }
+  .icon-home{
+    width: 22px;
+    height: 22px;
+    background-color: #1F1F1F;
+    padding: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: transform 0.05s ease-in-out;
+  }
+  .icon-home:hover{
+    transform: scale(1.05);
+  }
+  .pole-wyszukiwania{
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+  .input-container {
+    position: relative;
+    .wyszukiwarka{
+      border-radius: 500px;
+      border: 2px solid #1F1F1F ;
+      background-color: #1F1F1F;
+      color: white;
+      width: 420px;
+      box-sizing: border-box;
+      padding: 11px 20px 11px 45px;
+      font-size: 15px;
+      font-weight: 300;
+      transition: border 0.25s ease-out, background 0.25s ease-in;
+    }
+    .wyszukiwarka:hover{
+      background-color: #2A2A2A;
+      border: 2px solid #404040;
+    }
+    .wyszukiwarka:focus{
+      border: 2px solid white;
+      background-color: #2A2A2A;
+      outline: none;
+      
+    }
+  
+    .floating-label {
+      position: absolute;
+      top: 50%;
+      left: 47px;
+      transform: translateY(-50%);
+      color: #B3B3B3;
+      font-size: 15px;
+      pointer-events: none;
+    }
+    
+    .floating-label.hidden {
+      opacity: 0;
+    }
+    .szukaj{
+      position: absolute;
+      top: 26%;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0);
+      border:0;
+      left: 12px;
+      .icon-search{
+        color: #B3B3B3;
+        width: 22px;
+        height: 22px;
+      }
+    }
+    
+  }
+  
+  .logowanie{
+    display: flex;
+    text-wrap: nowrap;
+    .signup{
+      border: 0;
+      background-color: #00000000;
+      color: #B3B3B3;
+      font-weight: bold;
+      padding: 12px 25px 12px 25px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: transform 0.05s ease-in-out;
+    }
+    .signup:hover{
+      transform: scale(1.05);
+      color: white;
+    }
+    .login{
+      background-color: white;
+      border-radius: 500px;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 12px 28px 12px 28px;
+      border: 0;
+      cursor: pointer;
+      transition: transform 0.05s ease;
+    }
+    .login:hover{
+      transform: scale(1.05);
+    }
+  }
+}
+
+main{
+  display: flex;
+  padding: 70px 10px 0px 10px;
+  margin: 0;
+  overflow: hidden;
+  gap: 10px;
+  height:100%;
+  .lewy-panel{
+    background-color: #121212;
+    border-radius: 10px;
+    flex-grow: 1;
+  }
+  .main-section{
+    overflow: hidden;
+    border-radius: 10px;
+    width: 1012px;
+    background-color: #121212;
+  }
+}
+
+
+  
+
+
